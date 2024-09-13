@@ -1,6 +1,6 @@
 import React, { SyntheticEvent } from "react";
 import { AuthService } from "../../services/AuthService";
-import history from '../../utils/history'
+import historyTest from '../../utils/history'
 import './Forms.css';
 
 interface CustomEvent {
@@ -38,7 +38,7 @@ export class SignUp extends React.Component<{
                 this.state.confirmationCode
             )
             if (result) {
-                history.push('/login')
+                historyTest.push('/login')
             } else {
                 this.setState({
                     errorMessage: 'Confirmation code wrong!!!'

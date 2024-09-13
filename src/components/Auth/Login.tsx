@@ -2,7 +2,7 @@ import React, { SyntheticEvent } from "react";
 import { Link } from "react-router-dom";
 import { User } from "../../model/Model";
 import { AuthService } from "../../services/AuthService";
-import history from '../../utils/history'
+import historyTest from '../../utils/history'
 import './Forms.css'
 
 
@@ -45,7 +45,7 @@ export class Login extends React.Component<LoginProps, LoginState> {
         )
         if (result) {
             this.props.setUser(result)
-            history.push('/profile')
+            historyTest.push('/profile')
         } else {
             this.setState({loginStatusMessage: 'Login failed. Please check your credentials'})
         }

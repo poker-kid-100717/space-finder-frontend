@@ -4,7 +4,7 @@ import { AuthService } from '../services/AuthService'
 import { Login } from './Auth/Login';
 import { Logout } from './Auth/Logout';
 import { Router, Route, Switch } from 'react-router-dom'
-import  history from '../utils/history'
+import historyTest from '../utils/history'
 import { Navbar } from './Navbar';
 import { Home } from './Home';
 import { Profile } from './Profile';
@@ -56,7 +56,7 @@ export class App extends React.Component<{}, AppState>{
   render(){
     return (
       <div className='wrapper'>
-        <Router history={history}>
+        <Router history={historyTest}>
           <div>
             <Navbar user={this.state.user}/>
             <Switch>
